@@ -1,0 +1,30 @@
+{
+  "name": "pelicantodiscord",
+  "version": "0.0.1",
+  "description": "Connect your pelican panel to your discord using webhook!",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HirziDevs/PelicanToDiscord.git"
+  },
+  "keywords": [
+    "nodejs",
+    "discord",
+    "discord-bot",
+    "discord-js",
+    "yaml-configuration",
+    "pelican-panel-api",
+    "pelican-api"
+  ],
+  "author": "HirziDevs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HirziDevs/PelicanToDiscord/issues"
+  },
+  "homepage": "https://github.com/HirziDevs/PelicanToDiscord#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "express": "^4.21.1",
+    "js-yaml": "^4.1.0"
+  }
+}

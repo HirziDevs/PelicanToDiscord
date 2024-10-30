@@ -1,0 +1,436 @@
+{
+    "User": {
+        "created": {
+            "title": "User Created",
+            "description": "A new user with the username `{0}` has been added to the system."
+        },
+        "updated": {
+            "title": "User Updated",
+            "description": "The user with the username `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "User Deleted",
+            "description": "The user with the username `{0}` has been removed from the system."
+        }
+    },
+    "Server": {
+        "created": {
+            "title": "Server Created",
+            "description": "A new server with the name `{0}` has been created."
+        },
+        "updated": {
+            "title": "Server Updated",
+            "description": "The server with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Server Deleted",
+            "description": "The server with the name `{0}` has been deleted."
+        }
+    },
+    "DatabaseHost": {
+        "created": {
+            "title": "Database Host Created",
+            "description": "A new database host with the name `{0}` has been added."
+        },
+        "updated": {
+            "title": "Database Host Updated",
+            "description": "The database host with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Database Host Deleted",
+            "description": "The database host with the name `{0}` has been deleted."
+        }
+    },
+    "Role": {
+        "created": {
+            "title": "Role Created",
+            "description": "A new role with the name `{0}` has been created."
+        },
+        "updated": {
+            "title": "Role Updated",
+            "description": "The role with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Role Deleted",
+            "description": "The role with the name `{0}` has been deleted."
+        }
+    },
+    "WebhookConfiguration": {
+        "created": {
+            "title": "Webhook Created",
+            "description": "A new webhook with the description `{0}` has been created."
+        },
+        "updated": {
+            "title": "Webhook Updated",
+            "description": "The webhook with the description `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Webhook Deleted",
+            "description": "The webhook with the description `{0}` has been deleted."
+        }
+    },
+    "Egg": {
+        "created": {
+            "title": "Egg Created",
+            "description": "A new egg with the name `{0}` has been created."
+        },
+        "updated": {
+            "title": "Egg Updated",
+            "description": "The egg with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Egg Deleted",
+            "description": "The egg with the name `{0}` has been deleted."
+        }
+    },
+    "Node": {
+        "created": {
+            "title": "Node Created",
+            "description": "A new node with the name `{0}` has been added."
+        },
+        "updated": {
+            "title": "Node Updated",
+            "description": "The node with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Node Deleted",
+            "description": "The node with the name `{0}` has been deleted."
+        }
+    },
+    "Mount": {
+        "created": {
+            "title": "Mount Created",
+            "description": "A new mount with the name `{0}` has been created."
+        },
+        "updated": {
+            "title": "Mount Updated",
+            "description": "The mount with the name `{0}` has been updated."
+        },
+        "deleted": {
+            "title": "Mount Deleted",
+            "description": "The mount with the name `{0}` has been deleted."
+        }
+    },
+	"Database": {
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"EggMount": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"EggVariable": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"AdminServerFilter": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"MultiFieldServerFilter": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Model": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"MountNode": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"DeploymentObject": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Permission": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"RecoveryToken": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Schedule": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"ServerTransfer": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"ServerVariable": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Session": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Setting": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Subuser": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Task": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"TaskLog": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"HasAccessTokens": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"UserSSHKey": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Webhook": {
+		"created": {
+			"title": "",
+			"description": ""
+		},
+		"updated": {
+			"title": "",
+			"description": ""
+		},
+		"deleted": {
+			"title": "",
+			"description": ""
+		}
+	},
+	"Event": {},
+	"event": {
+		"Server": {
+			"Created": "",
+			"Creating": "",
+			"Deleted": "",
+			"Deleting": "",
+			"Installed": "The server with name `{0}` has been installed",
+			"Saved": "",
+			"Saving": "",
+			"Updated": "",
+			"Updating": ""
+		},
+		"Subuser": {
+			"Created": "",
+			"Creating": "",
+			"Deleted": "",
+			"Deleting": ""
+		},
+		"User": {
+			"Created": "",
+			"Creating": "",
+			"Deleted": "",
+			"Deleting": ""
+		},
+		"Event": {},
+		"Auth": {
+			"ProvidedAuthenticationToken": "No language text was found!",
+			"FailedPasswordReset": "No language text was found!",
+			"FailedCaptcha": "No language text was found!",
+			"DirectLogin": "The user with username `{0}` has been logged in to the panel"
+		},
+		"ActivityLogged": {
+			"auth:fail": "idk"
+		}
+	}
+}

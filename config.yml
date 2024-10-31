@@ -1,0 +1,11 @@
+version: 1
+
+port: 3000
+language: "en"
+Show_IP_Address: false
+
+discord:
+  webhook: ""
+  threadId: ""
+
+debug: false

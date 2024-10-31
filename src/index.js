@@ -1,7 +1,7 @@
-const { WebhookClient, EmbedBuilder, codeBlock } = require('discord.js')
-const express = require('express');
+const config = require("./handlers/configuration");
 const bodyParser = require('body-parser');
-const config = require("../config.json");
+const cliColor = require("cli-color");
+const express = require('express');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));

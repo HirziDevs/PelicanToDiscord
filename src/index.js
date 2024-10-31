@@ -1,3 +1,5 @@
+const { WebhookClient, EmbedBuilder } = require('discord.js')
+const parseString = require("./handlers/parseString");
 const config = require("./handlers/configuration");
 const bodyParser = require('body-parser');
 const cliColor = require("cli-color");
@@ -8,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', async (req, res) => {
-    res.send("PelicanToDiscord server is online!")
+	res.send("PelicanToDiscord server is online!")
 });
 
 try {
@@ -16,7 +18,7 @@ try {
 } catch (error) {
 	console.error(`No language file was found for "${config.language}"! Using english language...`, error)
 	config.language = "en"
-	
+
 	try {
 		require(`../lang/en.json`)
 	} catch (error) {
@@ -26,24 +28,24 @@ try {
 }
 
 const language = require(`../lang/${config.language}.json`)
-const webhook = new WebhookClient({ url: config.webhook })
+const webhook = new WebhookClient({ url: config.discord.webhook })
 
 app.post('/post', async (req, res) => {
-    const data = req.body
-	
+	const data = req.body
+
 	if (config.debug) console.log(data)
-	
+
 	let EventName = data.event.split(": ")[1]
 	let EventAction = data.event.split(": ")[0]
-	const attributes = data.attributes[0]
-	
+	let attributes = data.attributes[0]
+
 	const embed = new EmbedBuilder()
-	    .setTitle(`${EventName} ${EventAction}`)
-	    .setTimestamp()
-		
-	let content = null	
-	
-	switch(EventAction) {
+		.setTitle(`${EventName} ${EventAction}`)
+		.setTimestamp()
+
+	let content = null
+
+	switch (EventAction) {
 		case "created":
 			embed.setColor("57F287")
 			break;
@@ -57,46 +59,55 @@ app.post('/post', async (req, res) => {
 			embed.setColor("5865F2")
 			break;
 	}
-	
-	if(EventAction !== "event") {
-		if (language[EventName] && language[EventName][EventAction]) {
-		    let text = language[EventName][EventAction]
-			
-			if (text.title.length < 1) text = {
-				title: `${EventName} ${EventAction}`,
-				description: `${EventAction === "created" ? "A new" : "The"} ${EventName.toLowerCase()} with the identifier \`${attributes.name || attributes.description || attributes.host || attributes.username}\` has been ${EventAction}.`
+
+	try {
+		if (EventAction === "event") {
+			if (EventName.split("\\").length > 1) {
+				EventAction = EventName.split("\\")[1]
+				EventName = EventName.split("\\")[0]
+
+				let EventLanguage = language.event[EventName]
+				if (EventLanguage) {
+					EventLanguage = EventLanguage[EventAction]
+
+					embed
+						.setTitle(`${EventName} ${EventAction}`)
+						.setDescription(parseString(EventLanguage, attributes))
+				} else {
+					return console.log(attributes)
+				}
+			} else if (EventName === "ActivityLogged") {
+				embed
+					.setTitle(`User \`${attributes.model.actor ? attributes.model.actor.username : "Unknown"}\` Activity`)
+					.setDescription(parseString(language.event.ActivityLogged[attributes.model.event], attributes))
+
+				if (config.Show_IP_Address && attributes.model.ip) embed.addFields({
+					name: "IP Address",
+					value: attributes.model.ip
+				})
 			}
-		
+		} else {
 			embed
-                .setTitle(text.title)
-				.setDescription(text.description.replace("{0}", attributes.name || attributes.description || attributes.host || attributes.username))
-				
-	    } else embed.setDescription(`${EventAction === "created" ? "A new" : "The"} ${EventName.toLowerCase()} with the identifier \`${attributes.name || attributes.description || attributes.host || attributes.username}\` has been ${EventAction}.`)
-	} else {
-		if (EventName.split("\\").length > 1) {
-			EventAction = EventName.split("\\")[1]
-			EventName = EventName.split("\\")[0]
-			
-			embed
-			    .setTitle(`${EventName} ${EventAction}`)
-				.setDescription(language[EventName][EventAction] || "No language text was found!")
-			
-		} else if (EventName === "ActivityLogged") {
-			embed
-			    .setTitle(`${attributes.actor ? attributes.actor.username : "Unknown"} Activity`)
-			    .setDescription(language.event.ActivityLogged[attributes.event] || attributes.event)
+				.setTitle(language[EventName][EventAction].title)
+				.setDescription(parseString(language[EventName][EventAction].description, attributes))
+
 		}
+
+		webhook.send({
+			content,
+			embeds: [embed],
+			threadId: config.discord.threadId || null
+		})
+	} catch (error) {
+		console.error({
+			Event: {
+				name: EventName,
+				action: EventAction
+			},
+		}, attributes, error)
 	}
-	
-	if (config.debug) content = "### Raw Data\n" + codeBlock("json", JSON.stringify(data.attributes, null, 2).substring(0, 4096))
-	
-	webhook.send({
-		content,
-		embeds: [embed],
-		threadId: config.threadId || null
-	})
 });
 
 app.listen(config.port, () => {
-    console.log(`PelicanToDiscord server is online!`)
+	console.log(cliColor.cyanBright("[PelicanToDiscord] ") + cliColor.green("PelicanToDiscord server is online!"));
 })

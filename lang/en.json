@@ -1,116 +1,117 @@
 {
-    "User": {
-        "created": {
-            "title": "User Created",
-            "description": "A new user with the username `{0}` has been added to the system."
-        },
-        "updated": {
-            "title": "User Updated",
-            "description": "The user with the username `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "User Deleted",
-            "description": "The user with the username `{0}` has been removed from the system."
-        }
-    },
-    "Server": {
-        "created": {
-            "title": "Server Created",
-            "description": "A new server with the name `{0}` has been created."
-        },
-        "updated": {
-            "title": "Server Updated",
-            "description": "The server with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Server Deleted",
-            "description": "The server with the name `{0}` has been deleted."
-        }
-    },
-    "DatabaseHost": {
-        "created": {
-            "title": "Database Host Created",
-            "description": "A new database host with the name `{0}` has been added."
-        },
-        "updated": {
-            "title": "Database Host Updated",
-            "description": "The database host with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Database Host Deleted",
-            "description": "The database host with the name `{0}` has been deleted."
-        }
-    },
-    "Role": {
-        "created": {
-            "title": "Role Created",
-            "description": "A new role with the name `{0}` has been created."
-        },
-        "updated": {
-            "title": "Role Updated",
-            "description": "The role with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Role Deleted",
-            "description": "The role with the name `{0}` has been deleted."
-        }
-    },
-    "WebhookConfiguration": {
-        "created": {
-            "title": "Webhook Created",
-            "description": "A new webhook with the description `{0}` has been created."
-        },
-        "updated": {
-            "title": "Webhook Updated",
-            "description": "The webhook with the description `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Webhook Deleted",
-            "description": "The webhook with the description `{0}` has been deleted."
-        }
-    },
-    "Egg": {
-        "created": {
-            "title": "Egg Created",
-            "description": "A new egg with the name `{0}` has been created."
-        },
-        "updated": {
-            "title": "Egg Updated",
-            "description": "The egg with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Egg Deleted",
-            "description": "The egg with the name `{0}` has been deleted."
-        }
-    },
-    "Node": {
-        "created": {
-            "title": "Node Created",
-            "description": "A new node with the name `{0}` has been added."
-        },
-        "updated": {
-            "title": "Node Updated",
-            "description": "The node with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Node Deleted",
-            "description": "The node with the name `{0}` has been deleted."
-        }
-    },
-    "Mount": {
-        "created": {
-            "title": "Mount Created",
-            "description": "A new mount with the name `{0}` has been created."
-        },
-        "updated": {
-            "title": "Mount Updated",
-            "description": "The mount with the name `{0}` has been updated."
-        },
-        "deleted": {
-            "title": "Mount Deleted",
-            "description": "The mount with the name `{0}` has been deleted."
-        }
-    },
+	"User": {
+		"created": {
+			"title": "User Created",
+			"description": "A new user with the username `{username}` has been created."
+		},
+		"updated": {
+			"title": "User Updated",
+			"description": "The user with the username `{username}` has been updated."
+		},
+		"deleted": {
+			"title": "User Deleted",
+			"description": "The user with the username `{username}` has been deleted."
+		},
+		"url": ""
+	},
+	"Server": {
+		"created": {
+			"title": "Server Created",
+			"description": "A new server with the name `{name}` has been created."
+		},
+		"updated": {
+			"title": "Server Updated",
+			"description": "The server with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Server Deleted",
+			"description": "The server with the name `{name}` has been deleted."
+		}
+	},
+	"DatabaseHost": {
+		"created": {
+			"title": "Database Host Created",
+			"description": "A new database host with the name `{name}` has been added."
+		},
+		"updated": {
+			"title": "Database Host Updated",
+			"description": "The database host with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Database Host Deleted",
+			"description": "The database host with the name `{name}` has been deleted."
+		}
+	},
+	"Role": {
+		"created": {
+			"title": "Role Created",
+			"description": "A new role with the name `{name}` has been created."
+		},
+		"updated": {
+			"title": "Role Updated",
+			"description": "The role with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Role Deleted",
+			"description": "The role with the name `{name}` has been deleted."
+		}
+	},
+	"WebhookConfiguration": {
+		"created": {
+			"title": "Webhook Created",
+			"description": "A new webhook with the description `{description}` has been created."
+		},
+		"updated": {
+			"title": "Webhook Updated",
+			"description": "The webhook with the description `{description}` has been updated."
+		},
+		"deleted": {
+			"title": "Webhook Deleted",
+			"description": "The webhook with the description `{description}` has been deleted."
+		}
+	},
+	"Egg": {
+		"created": {
+			"title": "Egg Created",
+			"description": "A new egg with the name `{name}` has been created."
+		},
+		"updated": {
+			"title": "Egg Updated",
+			"description": "The egg with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Egg Deleted",
+			"description": "The egg with the name `{name}` has been deleted."
+		}
+	},
+	"Node": {
+		"created": {
+			"title": "Node Created",
+			"description": "A new node with the name `{name}` has been added."
+		},
+		"updated": {
+			"title": "Node Updated",
+			"description": "The node with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Node Deleted",
+			"description": "The node with the name `{name}` has been deleted."
+		}
+	},
+	"Mount": {
+		"created": {
+			"title": "Mount Created",
+			"description": "A new mount with the name `{name}` has been created."
+		},
+		"updated": {
+			"title": "Mount Updated",
+			"description": "The mount with the name `{name}` has been updated."
+		},
+		"deleted": {
+			"title": "Mount Deleted",
+			"description": "The mount with the name `{name}` has been deleted."
+		}
+	},
 	"Database": {
 		"deleted": {
 			"title": "",
@@ -404,7 +405,7 @@
 			"Creating": "",
 			"Deleted": "",
 			"Deleting": "",
-			"Installed": "The server with name `{0}` has been installed",
+			"Installed": "The server with name `{server.name}` has been installed.",
 			"Saved": "",
 			"Saving": "",
 			"Updated": "",
@@ -424,13 +425,15 @@
 		},
 		"Event": {},
 		"Auth": {
-			"ProvidedAuthenticationToken": "No language text was found!",
-			"FailedPasswordReset": "No language text was found!",
-			"FailedCaptcha": "No language text was found!",
-			"DirectLogin": "The user with username `{0}` has been logged in to the panel"
+			"ProvidedAuthenticationToken": "The user with username `{user.username}` attempted to provide an authentication token.",
+			"FailedPasswordReset": "The user with username `{user.username}` attempted a password reset.",
+			"FailedCaptcha": "The user with username `{user.username}` failed the CAPTCHA verification.",
+			"DirectLogin": "The user with username `{user.username}` has been logged in to the panel."
 		},
 		"ActivityLogged": {
-			"auth:fail": "idk"
+			"auth:fail": "Someone is trying to logged in with username `{model.properties.username}`.",
+			"auth:success": "The user with username `{model.actor.username}` has been logged in to the panel.",
+			"server:reinstall": "The user with username `{model.actor.username}` reinstall a server."
 		}
 	}
 }
